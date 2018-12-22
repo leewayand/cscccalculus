@@ -18,7 +18,7 @@ with \textit{spherical} coordinates.
 
 \begin{definition}
   An ordered triple consisting of a radius, an angle, and a height
-  $(\rho,\varphi,\theta)$ can be graphed as
+  $(\rho,\theta, \varphi)$ can be graphed as
   \begin{align*}
     x &= \rho\cdot \cos(\theta)\sin(\varphi)\\
     y &= \rho\cdot \sin(\theta)\sin(\varphi)\\
@@ -66,11 +66,11 @@ with \textit{spherical} coordinates.
 \end{definition}
 
 \begin{question}
-  Conside the point $(\rho,\theta,\phi)=(2,-\pi/4,\pi/4)$ in spherical coordinates. What is
+  Consider the point $(\rho,\theta,\phi)=(2,-\pi/4,\pi/4)$ in spherical coordinates. What is
   this point when expressed in $(x,y,z)$-coordinates?
   \begin{prompt}
     \[
-    (x,y,z) = (\answer{2\cos(-\pi/4)\sin(\pi/4)}, \answer{2 \sin(-\pi/4)\sin(\pi/4)},\answer{2\cos(\pi/4)})
+    (x,y,z) = \left(\answer{2\cos(-\pi/4)\sin(\pi/4)}, \answer{2 \sin(-\pi/4)\sin(\pi/4)},\answer{2\cos(\pi/4)}\right)
     \]
   \end{prompt}
   %% \begin{question}
@@ -78,7 +78,7 @@ with \textit{spherical} coordinates.
   %%   point when expressed in spherical coordinates?
   %%   \begin{prompt}
   %%     \[
-  %%     (\rho,\varphi,\theta) = BADBAD
+  %%     (\rho,\theta,\phi) = \left(\sqrt{27},\arctan(1),\right)
   %%     \]
   %%   \end{prompt}
   %% \end{question}
@@ -97,7 +97,7 @@ with some iterated integral:
 \int_a^b\int_c^d\int_p^q F(x,y,z) \d y \d x\d z
 \]
 Now consider representing a region $R$ in spherical coordinates and
-let's express $\d V$ in terms of $\d \rho$, $\d\theta$, and $\d z$. To
+let's express $\d V$ in terms of $\d \rho$, $\d\phi$, and $\d \theta$. To
 do this, consider the diagram below:
   \begin{image}
     \begin{tikzpicture}
@@ -178,7 +178,7 @@ Here we see
 
 
 \begin{remark}
-Recalling that the determiant of a $3\times 3$ matrix gives
+Recalling that the determinate of a $3\times 3$ matrix gives
 the volume of a parallelepiped, we could also deduce the correct for
 for $\d V$ by setting
 \begin{align*}

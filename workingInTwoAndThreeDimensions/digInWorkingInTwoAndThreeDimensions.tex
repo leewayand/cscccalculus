@@ -61,9 +61,9 @@ we have three coordinates axes, the $x$-axis, $y$-axis, and $z$-axis:
   \draw[->] (-1,0)--(1,0);
   \draw[->] (0,-1)--(0,1);
   \draw[->] (.4,.7)--(-.4,-.7);
-  \node[right] at (1,0) {$x$};
-  \node[above] at (0,1) {$y$};
-  \node[below] at (-.4,-.7) {$z$};
+  \node[right] at (1,0) {$y$};
+  \node[above] at (0,1) {$z$};
+  \node[below] at (-.4,-.7) {$x$};
 \end{tikzpicture}
 \end{image}
 The axes point according to the \dfn{right-hand-rule}:
@@ -275,8 +275,8 @@ dimensions is really different from working in two.
 The most basic surface in $\R^3$ is a plane.
 
 \begin{question}
-  The $(y,z)$-plane corresponds to which of the following
-  equations?
+  Which equation describes the $(y,z)$-plane?
+  \begin{prompt}
   \begin{multipleChoice}
     \choice[correct]{$x=0$}
     \choice{$y=0$}
@@ -285,26 +285,30 @@ The most basic surface in $\R^3$ is a plane.
   \begin{hint}
     For every point on the $(y,z)$-plane, the $x$-coordinate is zero.
   \end{hint}
+  \end{prompt}
 \end{question}
 
 \begin{question}
-  Which of the following most accurately describes the solution
-  set of $y=2$ in $\R^3$?
+  Can you describes the solution set of $y=2$ in $\R^3$?
+  \begin{prompt}
   \begin{multipleChoice}
-    \choice{a horizontal line}
-    \choice{a vertical line}
-    \choice{a plane parallel to the $(x,y)$-plane}
-    \choice[correct]{a plane parallel to the $(x,z)$-plane}
-    \choice{a plane parallel to the $(y,z)$-plane}
+    \choice{It's a horizontal line.}
+    \choice{It's a vertical line.}
+    \choice{It's a plane parallel to the $(x,y)$-plane.}
+    \choice[correct]{It's a plane parallel to the $(x,z)$-plane.}
+    \choice{It's a plane parallel to the $(y,z)$-plane.}
   \end{multipleChoice}
   \begin{hint}
     $y=2$ consists of all those points where $y=2$, but $x$ and
     $z$ are allowed to be anything.  
   \end{hint}
+  \end{prompt}
 \end{question}
 
 
-Another way to think of the point $(a,b,c)$ is as the intersection of the planes $x=a$, $y=b$, $z=c$. 
+Another way to think of the point $(a,b,c)$ is as the intersection of
+the planes $x=a$, $y=b$, $z=c$.
+
 \begin{onlineOnly}
   Move the point around below to see the planes that define it.
 
@@ -314,8 +318,8 @@ Another way to think of the point $(a,b,c)$ is as the intersection of the planes
 \end{onlineOnly}
 
 
-While the intersection of three planes is a point, the intersection of
-two planes is a line.
+While three planes need not intersect at all, the intersection of two
+(nonparallel) planes is a line.
 
 \begin{question}
   What is the intersection of the $(x,y)$-plane and the $(y,z)$-plane?

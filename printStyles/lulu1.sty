@@ -210,7 +210,8 @@
 \begin{tikzpicture}
   \node[anchor=west] at (0,0) {\scalebox{1}{\Huge\textsf{\ccbyncsa}}};
   \node[anchor=west] at (4,-.25) {\large\textsf{developed in \textbf{XIMERA}}};
-  \node[anchor=east] at (7in,-.25) {\small\textsf{This document was typeset on \today.}};
+  \node[anchor=east] at (7in,.1) {\small\textsf{This document was typeset on \today.}};
+  \node[anchor=east] at (7in,-.25) {\small\texttt{GIT COMMIT: \input{.git/refs/heads/master}}};
 \end{tikzpicture}
 \end{flushleft}
 \thispagestyle{empty}
@@ -292,18 +293,20 @@ improvement at: \texttt{ximera@math.osu.edu}
 \renewcommand\chapterstyle{%
   \def\maketitle{%
     \addtocounter{titlenumber}{1}%
-    \addcontentsline{toc}{section}{\textbf{\thetitlenumber\quad\@title}}%
+    \phantomsection
+    \addcontentsline{toc}{section}{\textbf{\thetitlenumber\hspace{1em}\@title}}%
                     {\flushleft\small\sffamily\bfseries\@pretitle\par\vspace{-1.5em}}%
-                    {\flushleft\LARGE\sffamily\bfseries\thetitlenumber\quad\@title \par }%
+                    {\flushleft\LARGE\sffamily\bfseries\thetitlenumber\hspace{1em}\@title \par }%
                     {\setcounter{problem}{0}\setcounter{sectiontitlenumber}{0}}%
                     \par}}
 
 \renewcommand\sectionstyle{%
   \def\maketitle{%
     \addtocounter{sectiontitlenumber}{1}
-    \addcontentsline{toc}{subsection}{\thetitlenumber.\thesectiontitlenumber\quad\@title}%
+    \phantomsection
+    \addcontentsline{toc}{subsection}{\thetitlenumber.\thesectiontitlenumber\hspace{1em}\@title}%
     {\flushleft\small\sffamily\bfseries\@pretitle\par\vspace{-1.5em}}%
-    {\flushleft\Large\sffamily\bfseries\thetitlenumber.\thesectiontitlenumber\quad\@title \par}%
+    {\flushleft\Large\sffamily\bfseries\thetitlenumber.\thesectiontitlenumber\hspace{1em}\@title \par}%
     \par}}
 
 %% redefine Part
@@ -404,6 +407,14 @@ improvement at: \texttt{ximera@math.osu.edu}
 \let\endwarning\relax
 \newtheorem*{warning}{Warning}
 \makeatother
+
+
+%% Hides expandable
+\let\expandable\relax
+\let\endexpandable\relax
+\NewEnviron{expandable}{}
+
+
 
 %% Redefines "explanation"
 \renewmdenv[

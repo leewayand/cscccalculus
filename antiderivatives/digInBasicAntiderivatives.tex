@@ -77,11 +77,13 @@ for all $x$ in the interval.
      Could there exist any other antiderivative of $f$, call it $G$, such that $G(x)$ is not a sum of $x^2$ and a constant?
     In that case, for all $x$  we would have
   \[
-  (G(x)-x^2)' = G'(x)-2x=f(x)-2x= \answer[given]{0}\\
+  (G(x)-x^2)' = G'(x)-2x=f(x)-2x= \answer[given]{0}
 \]
   \end{feedback}
-  Recall: Any function whose derivative is equal to $0$ on some interval is equal to a constant on that interval.
-  This means that the function $G(x)-x^2=C$, for some constant $C$. This implies that $G(x)=x^2+C$, for all x.
+  Recall: Any function whose derivative is equal to $0$ on some
+  interval is equal to a constant on that interval.  This means that
+  the function $G(x)-x^2=C$, for some constant $C$. This implies that
+  $G(x)=x^2+C$, for all x.
 \end{question}
 
 
@@ -139,21 +141,21 @@ directly from our knowledge of basic derivatives.
 %% \end{question}
 %% \end{theorem}
 
-\begin{theorem}[Basic Indefinite Integrals]\index{antiderivatives}\index{indefinite integral}\hfil
+\begin{theorem}[Basic Indefinite Integrals]\index{antiderivative}\index{indefinite integral}\hfil
 \begin{itemize}
-\item $\int k \d x= \answer[given]{k x}+C$
-\item $\int \frac{1}{x} \d x= \answer[given]{\ln|x|}+C$
-\item $\int x^n \d x= \answer[given]{\frac{x^{n+1}}{n+1}}+C\qquad(n\ne-1)$
-\item $\int e^x \d x= \answer[given]{e^x} + C$
-\item $\int a^x \d x= \answer[given]{\frac{a^x}{\ln(a)}}+C$
-\item $\int \cos(x) \d x = \answer[given]{\sin(x)} + C$
-\item $\int \sin(x) \d x = \answer[given]{-\cos(x)} + C$  
-\item $\int \sec^2(x) \d x = \answer[given]{\tan(x)} + C$
-\item $\int \csc^2(x) \d x = \answer[given]{-\cot(x)} + C$
-\item $\int \sec(x)\tan(x) \d x = \answer[given]{\sec(x)} + C$
-\item $\int \csc(x)\cot(x) \d x = \answer[given]{-\csc(x)} + C$
-\item $\int \frac{1}{x^2+1}\d x = \answer[given]{\arctan{x}} + C$
-\item $\int \frac{1}{\sqrt{1-x^2}}\d x= \answer[given]{\arcsin{x}}+C$
+\item $\int k \d x= k x+C$
+\item $\int \frac{1}{x} \d x= \ln|x|+C$
+\item $\int x^n \d x= \frac{x^{n+1}}{n+1}+C\qquad(n\ne-1)$
+\item $\int e^x \d x= e^x + C$
+\item $\int a^x \d x= \frac{a^x}{\ln(a)}+C$
+\item $\int \cos(x) \d x = \sin(x) + C$
+\item $\int \sin(x) \d x = -\cos(x) + C$  
+\item $\int \sec^2(x) \d x = \tan(x) + C$
+\item $\int \csc^2(x) \d x = -\cot(x) + C$
+\item $\int \sec(x)\tan(x) \d x = \sec(x) + C$
+\item $\int \csc(x)\cot(x) \d x = -\csc(x) + C$
+\item $\int \frac{1}{x^2+1}\d x = \arctan{(x)} + C$
+\item $\int \frac{1}{\sqrt{1-x^2}}\d x= \arcsin{(x)}+C$
 \end{itemize}
 \end{theorem}
 
@@ -177,12 +179,11 @@ Consider the following example.
     \choice[correct]{$H(x)=\sin{x}+\ln{x}$}
   \end{multipleChoice}
   \begin{feedback}
-    Differentiate each choice.
-    
-     In the last choice we get $H'(x)=\cos{x}+\frac{1}{x}=h(x)$.
+    Differentiate each choice.  In the last choice we get
+    $H'(x)=\cos{x}+\frac{1}{x}=h(x)$.
   \end{feedback}
 \end{example}
-It is easy to recognize an antiderivative: we just have to differentiate it, and check wether $H'(x)=h(x)$, for all $x$ in $I$.
+It is easy to recognize an antiderivative: we just have to differentiate it, and check whether $H'(x)=h(x)$, for all $x$ in $I$.
 
 Notice, that the function $h$ is the sum of the two functions, $f$ and $g$, where $f(x)=\cos{x}$ and $g(x)=\frac{1}{x}$, for $x$ in $I$.
 
@@ -234,7 +235,7 @@ Let's consider the following example.
     $H'(x)=5\sec^{2}{x}=h(x)$.
   \end{feedback}
 \end{example}
-It is easy to recognize an antiderivative: we just have to differentiate it, and check wether $H'(x)=h(x)$, for all $x$ in $I$.
+It is easy to recognize an antiderivative: we just have to differentiate it, and check whether $H'(x)=h(x)$, for all $x$ in $I$.
 
 Notice, in this example the function $h$ is a constant multiple of $f$, 
 
@@ -334,7 +335,7 @@ that in general
 \section{Computing antiderivatives}
 
 
-Unfortunately, we cannot tell you how to compute every antiderivative,
+Unfortunately, we cannot tell you how to compute every antiderivative;
 we view them as a sort of \textit{puzzle}. Later we will learn a
 hand-full of techniques for computing antiderivatives. However, a
 robust and simple way to compute antiderivatives is guess-and-check.
@@ -576,104 +577,104 @@ When a mathematician solves a differential equation, they are finding
   \end{selectAll}
 \end{question}
 \begin{remark}
-    It turns out that the complete solution to this differential equation
-    is $Ce^x$, i.e., all the solutions of this differential equation have this form. 
+    We can directly check that any function $f(x)=Ce^x$ is a solution to our differential equation $f'(x)=f(x)$. Could there be any others? It turns out that these are the \textit{only} solutions. But showing that we didn't miss any is a bit tricky.
+    \begin{expandable}
+   \begin{explanation}
+    Well, suppose we have some mysterious function $f$ and all we know is that $f'(x)=f(x)$. Let's define a new function $g(x)=f(x)/e^x$. Since our denominator is never 0, the quotient rule tells us that
+    \[
+	    g'(x)= \frac{e^x f'(x)- f(x) e^x}{(e^x)^2} = \frac{e^x\left(f'(x)- f(x)\right)}{(e^x)^2} = \frac{e^x\cdot 0}{(e^x)^2}=0.
+    \]
+    But we know that a function with a 0 derivative is constant, so $g(x)=C$. Plugging this back into our formula for $g(x)$ tells us that $C=f(x)/e^x$. Now we rearrange to get $f(x)=Ce^x$.
     
-    Showing that any function $y=Ce^x$ is a solution of this  differential equation is easy, but showing that \textbf{all} of the solutions have this form is beyond the scope of this course.  
-    
-      A function $Ce^x$ is called a \dfn{general solution} of the differential equation. 
-      
-   Since there are infinitely many solutions to a differential equation, we can impose additional condition, called an \dfn{initial condition}, e.g. $f(0)=1$.
-   
-   
-   The problem now is to find a function $f$ that satisfies both the differential equation (DE) and the initial condition (IC).
-     \[
-  f'(x) = f(x) \hspace{0.3in}(DE)  
-   \]  
-  \[
-  f(0) =1   \hspace{0.46in}(IC)  
-  \]
-   This is called an \dfn{initial value problem} (IVP). 
-      
-   The figure below shows several solutions of the differential equation. 
-     \begin{image}
-          \begin{tikzpicture}
-	    \begin{axis}[
-            domain=-3:3,
-            xmin=-3, xmax=3,
-            ymin=-6
-           , ymax=6,
-            axis lines =middle, xlabel=$x$, ylabel=$y$,
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-          ]
-	  \addplot [very thick, penColor, smooth] {e^x};
-         \addplot [very thick, penColor2, smooth] {2*e^x};
-    \addplot [very thick, penColor2, smooth] {-2*e^x};
-        \addplot [very thick, penColor2, smooth] {-e^x};
-          \addplot [color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,1)};  %% closed hole 
-          \node at (axis cs:1.6,2.3) [penColor] {$f(x)=e^x$};
-          \node at (axis cs:2.25,-5) [penColor2] {$y=-e^x$};
-          \node at (axis cs:0.25,-5) [penColor2] {$y=-2e^x$};
-            \node at (axis cs:0.54,5.5) [penColor2] {$y=2e^x$};
-        \end{axis}
-\end{tikzpicture}
+    This shows us that any solution to our differential equation \textit{must} be one of the functions we've already found. Our argument relies on some features that are special to this problem; proving that we've found all the possible solutions to an arbitrary differential equation is a very difficult task!   
+   \end{explanation} 
+    \end{expandable}
+\end{remark}
+	
+A function $Ce^x$ is called a \dfn{general solution} of the differential equation. Since there are infinitely many solutions to a differential equation, we can impose an additional condition (say $f(0)=1$), called an \dfn{initial condition}. When we are asked to find a function $f$ that satisfies both the differential equation (DE) and the initial condition (IC), this is called an \dfn{initial value problem} (IVP). Let's try one out.
+\begin{example}
+Solve the initial value problem (IVP):
+\begin{align*}
+	f'(x) & = f(x) && \text{(DE)}  \\
+	f(0) & = 1 && \text{(IC)} 
+\end{align*}
+\begin{explanation}
+The figure below shows several solutions of the differential equation. 
+\begin{image}
+	\begin{tikzpicture}
+	\begin{axis}[
+	domain=-3:3,
+	xmin=-3, xmax=3,
+	ymin=-6
+	, ymax=6,
+	axis lines =middle, xlabel=$x$, ylabel=$y$,
+	every axis y label/.style={at=(current axis.above origin),anchor=south},
+	every axis x label/.style={at=(current axis.right of origin),anchor=west},
+	]
+	\addplot [very thick, penColor, smooth] {e^x};
+	\addplot [very thick, penColor2, smooth] {2*e^x};
+	\addplot [very thick, penColor2, smooth] {-2*e^x};
+	\addplot [very thick, penColor2, smooth] {-e^x};
+	\addplot [color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,1)};  %% closed hole 
+	\node at (axis cs:1.6,2.3) [penColor] {$f(x)=e^x$};
+	\node at (axis cs:2.25,-5) [penColor2] {$y=-e^x$};
+	\node at (axis cs:0.25,-5) [penColor2] {$y=-2e^x$};
+	\node at (axis cs:0.54,5.5) [penColor2] {$y=2e^x$};
+	\end{axis}
+	\end{tikzpicture}
 \end{image}
 The figure suggests that the only solution to the initial value problem is the function $f(x)=e^x$.
 We can verify this result.
 
 Since all solutions of the differential equation have the form $f(x)=Ce^x$ and $f(0)=1$, it follows that 
-  \[
-  Ce^0 = 1.
-  \]
+\[
+Ce^0 = 1.
+\]
 Therefore,
- \[
-  C = \answer[given]{1}.
-  \]
-  So, the \textbf{unique} solution of the given initial value problem is the function $f(x)=e^x$.
-\end{remark}
+\[
+C = \answer[given]{1}.
+\]
+So, the \textbf{unique} solution to the given initial value problem is the function $f(x)=e^x$.
+\end{explanation}
+\end{example}
+
 \begin{example}
 Solve the initial value problem (IVP):
-\[
-f'(x)=\sin{x}
-\]
-\[
-f(0)=-1
-\]
+\begin{align*}
+f'(x) & = \sin{x}  \\
+f(0) & = -1 
+\end{align*}
 \begin{explanation}
 First, we have to solve the differential equation. The solution is clearly an antiderivative of $\sin{x}$.
 \[
 f(x)=-\answer[given]{\cos{x}}+C,
 \]
 where $C$ is an arbitrary constant. We have found the general solution of the DE  and this family of solutions is illustrated by the figure below. 
-   \begin{image}
-          \begin{tikzpicture}
-	    \begin{axis}[
-            domain=-3:3,
-            xmin=-3, xmax=3,
-            ymin=-3
-           , ymax=3,
-            axis lines =middle, xlabel=$x$, ylabel=$y$,
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-          ]
-	  \addplot [very thick, penColor, smooth] {-cos(deg(x))};
-         \addplot [very thick, penColor2, smooth] {1-cos(deg(x))};
+\begin{image}
+	\begin{tikzpicture}
+	\begin{axis}[
+	domain=-3:3,
+	xmin=-3, xmax=3,
+	ymin=-3, ymax=3,
+	axis lines =middle, xlabel=$x$, ylabel=$y$,
+	every axis y label/.style={at=(current axis.above origin),anchor=south},
+	every axis x label/.style={at=(current axis.right of origin),anchor=west},]
+	\addplot [very thick, penColor, smooth] {-cos(deg(x))};
+	\addplot [very thick, penColor2, smooth] {1-cos(deg(x))};
     \addplot [very thick, penColor2, smooth] {3-cos(deg(x))};
-     \addplot [very thick, penColor2, smooth] {2-cos(deg(x))};
-        \addplot [very thick, penColor2, smooth] {-1-cos(deg(x))};
-          \addplot [color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,-1)};  %% closed hole 
-          \node at (axis cs:0,-1.1) [penColor] {$f(x)=-\cos{x}$};
-          \node at (axis cs:0,-2.2) [penColor2] {$y=-\cos{x}-1$};
-         \node at (axis cs:0.2,-0.1) [penColor2] {$y=-\cos{x}+1$};
-            \node at (axis cs:0,0.9) [penColor2] {$y=-\cos{x}+2$};
-             \node at (axis cs:0,1.8) [penColor2] {$y=-\cos{x}+3$};
-            \node at (axis cs:0.54,5.5) [penColor2] {$y=2e^x$};
-        \end{axis}
-\end{tikzpicture}
+    \addplot [very thick, penColor2, smooth] {2-cos(deg(x))};
+    \addplot [very thick, penColor2, smooth] {-1-cos(deg(x))};
+    \addplot [color=penColor,fill=penColor,only marks,mark=*] coordinates{(0,-1)};  %% closed hole 
+    \node at (axis cs:0,-1.1) [penColor] {$f(x)=-\cos{x}$};
+    \node at (axis cs:0,-2.2) [penColor2] {$y=-\cos{x}-1$};
+    \node at (axis cs:0.2,-0.1) [penColor2] {$y=-\cos{x}+1$};
+    \node at (axis cs:0,0.9) [penColor2] {$y=-\cos{x}+2$};
+    \node at (axis cs:0,1.8) [penColor2] {$y=-\cos{x}+3$};
+    \node at (axis cs:0.54,5.5) [penColor2] {$y=2e^x$};
+    \end{axis}
+	\end{tikzpicture}
 \end{image}
-Now, we have to find the solution that also satisfies the initial condition 
-
+Now we must find the solution that also satisfies the initial condition 
 $f(0)=-1$.
 
 Since

@@ -2,9 +2,7 @@
 
 \input{../preamble.tex}
 
-\title[Dig-In]{Maximums and minimums}
-
-
+\title[Dig-In:]{Maximums and minimums}
 
 \outcome{Define a critical point.}
 \outcome{Find critical points.}
@@ -21,8 +19,6 @@
 \outcome{Define inflection points.}
 \outcome{Find inflection points.}
   
-
-
 \begin{document}
 \begin{abstract}
 We use derivatives to help locate extrema.  
@@ -38,9 +34,9 @@ provided by derivatives of the function.
 
 \section{Extrema}
 
-Local \textit{extrema} of a function are points on the graph where the
+A local \textit{extremum} of a function $f$ is a point $(a,f(a))$ on the graph of  $f$ where the
 $y$-coordinate is larger (or smaller) than all other $y$-coordinates
-on the graph at points ``close to'' $(x,y)$. 
+ of points on the graph whose $x$-coordinates are ``close to''  $a$. 
 
 \begin{definition}\hfil\index{maximum/minimum!local}
 \begin{enumerate}
@@ -83,7 +79,7 @@ Consider the graph of a function $f$:
        \addplot [ very thick, penColor, smooth] plot coordinates {(0.75,0) (1.25,0)}; 
           \addplot [very thick, penColor, smooth] {-2*x^3+9*x^2-12*x};
           \node at (axis cs:2.2,5/2) [anchor=west] {\color{penColor}$f$};  
-              \node at (axis cs:0.52,-3) [anchor=west] {\color{penColor}$f(x)$};  
+              \node at (axis cs:0.6,-3) [anchor=west] {\color{penColor}$f(x)$};  
                 \node at (axis cs:1,-3) [anchor=west] {\color{penColor2}$f(1)$};  
      \node at (axis cs:0.78,-0.35) [anchor=west] {\color{penColor}$x$}; 
        \node at (axis cs:0.9,0.6) [anchor=west] {\color{penColor}$I$};  
@@ -105,7 +101,7 @@ In the figure above the function $f$ has a local minimum at,
 \[
 a=\answer[given]{1},
 \]
-because were able to find an \textbf{open} interval $I$ (marked in the
+because we can find an \textbf{open} interval $I$ (marked in the
 figure) that contains the number
 \[
 a=\answer[given]{1},
@@ -119,11 +115,9 @@ f\left(\answer[given]{1}\right)\le f\left(\answer[given]{x}\right).
 
 Local maximum and minimum points are quite distinctive on the graph of
 a function, and are, therefore, useful in understanding the shape of the
-graph. In many applied problems we want to find the largest or
-smallest value that a function achieves (for example, we might want
-to find the minimum cost at which some task can be performed) and so
-identifying maximum and minimum points will be useful for applied
-problems as well.
+graph. Many problems in real world and in different scientific fields turn out to be about
+finding the smallest (or largest) value that a function achieves (for example, we might want
+to find the minimum cost at which some task can be performed).
 
 
 
@@ -339,14 +333,16 @@ Select the correct statement.
 This brings us to our next definition.
 
 \begin{definition}\index{critical point}
-  Assume that a function $f$ is defined on an open interval I that contains a point $a$. The  function $f$ has a \dfn{critical point} at $x=a$ if 
+  Assume that a function $f$ is defined on an open interval I that contains a point $a$. Then we say that the  function $f$ has a \dfn{critical point} at $x=a$ if 
   \[
   f'(a) = 0\qquad\text{or}\qquad \text{$f'(a)$ does not exist.}
   \]
+ Notice, if a function $f$ has a critical point at $x=a$, then the number $a$ is inside some open interval $I$, and $I$ is in the  domain of $f$. 
+ 
 \end{definition}
 
 \begin{warning} 
-When looking for local maximum and minimum points, you are likely to
+When looking for local maximum and minimum points, be careful not to
 make two sorts of mistakes: 
 \begin{itemize}
 \item You may forget that a maximum or minimum can occur where the
@@ -394,19 +390,29 @@ Write
 \] 
 We can easily express  $f'(x)$ as a product of its factors
 \[
-\ddx f(x)=3(x+\answer[given]{\frac{\sqrt{3}}{3}})(x-\answer[given]{\frac{\sqrt{3}}{3}}),
+\ddx
+f(x)=3\left(x+\answer[given]{\frac{\sqrt{3}}{3}}\right)\left(x-\answer[given]{\frac{\sqrt{3}}{3}}\right),
 \] 
-which implies that the function $f$ has only two critical points, $x=-\frac{\sqrt{3}}{3}$ and  $x=\frac{\sqrt{3}}{3}$. Notice that the derivative $f'(x)$ is a polynomial, and polynomials do not change signs except possibly at their zeros. This implies that derivative $f'(x)$ \textbf{does not change the sign} on the intervals $(-\infty,-\frac{\sqrt{3}}{3})$, $(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})$, and $(\frac{\sqrt{3}}{3},\infty)$, because these intervals do not contain any zeros of $f'(x)$.
+which implies that the function $f$ has only two critical points,
+$x=-\frac{\sqrt{3}}{3}$ and $x=\frac{\sqrt{3}}{3}$. Notice that the
+derivative $f'(x)$ is a polynomial, and polynomials do not change
+signs except possibly at their zeros. This implies that derivative
+$f'(x)$ \textbf{does not change the sign} on the intervals
+$\left(-\infty,-\frac{\sqrt{3}}{3}\right)$,
+$\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$, and
+$\left(\frac{\sqrt{3}}{3},\infty\right)$, because these intervals do not contain
+any zeros of $f'(x)$.
  
 \begin{question}
-Select the correct  statement about the sign of $f'(x)$ on the intervals $(-\infty,-\frac{\sqrt{3}}{3})$ and $(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})$. \\
- 
-  \begin{multipleChoice}
-    \choice{$f'(x)>0$ on $(-\infty,-\frac{\sqrt{3}}{3})$ and $f'(x)>0$ on $(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})$. }
-      \choice[correct]{$f'(x)>0$ on $x$ in $(-\infty,-\frac{\sqrt{3}}{3})$ and $f'(x)<0$ on $(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})$. }
-        \choice{$f'(x)<0$ on $(-\infty,-\frac{\sqrt{3}}{3})$ and $f'(x)>0$ on $(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})$. }
-          \choice{$f'(x)<0$ on $(-\infty,-\frac{\sqrt{3}}{3})$ and $f'(x)<0$ on $(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})$}
-            \end{multipleChoice}
+Select the correct statement about the sign of $f'(x)$ on the
+intervals $\left(-\infty,-\frac{\sqrt{3}}{3}\right)$ and
+$\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$. 
+\begin{multipleChoice}
+  \choice{$f'(x)>0$ on $\left(-\infty,-\frac{\sqrt{3}}{3}\right)$ and $f'(x)>0$ on $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$. }
+  \choice[correct]{$f'(x)>0$ on $x$ in $\left(-\infty,-\frac{\sqrt{3}}{3}\right)$ and $f'(x)<0$ on $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$. }
+  \choice{$f'(x)<0$ on $\left(-\infty,-\frac{\sqrt{3}}{3}\right)$ and $f'(x)>0$ on $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$. }
+  \choice{$f'(x)<0$ on $\left(-\infty,-\frac{\sqrt{3}}{3}\right)$ and $f'(x)<0$ on $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$}
+\end{multipleChoice}
   \end{question}
   If we know the sign of the derivative on an interval, we also know whether the function is increasing or decreasing on that interval. This will help us determine whether the function has a local extremum at the critical point  where $x=-\frac{\sqrt{3}}{3}$. \\
   \begin{question}
@@ -414,19 +420,19 @@ Select the correct  statement about the sign of $f'(x)$ on the intervals $(-\inf
 At the critical point where $x=-\frac{\sqrt{3}}{3}$, the function $f$ has  \\
  
   \begin{multipleChoice}
-    \choice{no local extremum, because $f$ is increasing on $(-\infty,-\frac{\sqrt{3}}{3})$ and increasing on $(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})$. }
-      \choice[correct]{a local maximum, because $f$ is increasing on $(-\infty,-\frac{\sqrt{3}}{3})$ and decreasing on $(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})$. }
-      \choice{a local minimum, because $f$ is decreasing on $(-\infty,-\frac{\sqrt{3}}{3})$ and increasing on $(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})$. }
-         \choice{no local extremum, because $f$ is decreasing on $(-\infty,-\frac{\sqrt{3}}{3})$ and decreasing on $(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})$. }  \end{multipleChoice}
+    \choice{no local extremum, because $f$ is increasing on $\left(-\infty,-\frac{\sqrt{3}}{3}\right)$ and increasing on $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$. }
+      \choice[correct]{a local maximum, because $f$ is increasing on $\left(-\infty,-\frac{\sqrt{3}}{3}\right)$ and decreasing on $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$. }
+      \choice{a local minimum, because $f$ is decreasing on $\left(-\infty,-\frac{\sqrt{3}}{3}\right)$ and increasing on $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$. }
+         \choice{no local extremum, because $f$ is decreasing on $\left(-\infty,-\frac{\sqrt{3}}{3}\right)$ and decreasing on $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$. }  \end{multipleChoice}
   \end{question}
   \begin{question}
-Select the correct  statement about the sign of $f'(x)$ on the intervals  $(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})$ and  $(\frac{\sqrt{3}}{3},\infty)$. \\
+Select the correct  statement about the sign of $f'(x)$ on the intervals  $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$ and  $\left(\frac{\sqrt{3}}{3},\infty\right)$. \\
  
   \begin{multipleChoice}
-    \choice{$f'(x)>0$ on $(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})$  and $f'(x)>0$ on $(\frac{\sqrt{3}}{3},\infty)$.}
-    \choice{$f'(x)>0$ on $(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})$ and $f'(x)<0$ on $(\frac{\sqrt{3}}{3},\infty)$.}
-       \choice[correct]{$f'(x)<0$ on   $(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})$  and $f'(x)>0$ on $(\frac{\sqrt{3}}{3},\infty)$.}
-         \choice{$f'(x)<0$ on  $(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})$  and $f'(x)<0$ on $(\frac{\sqrt{3}}{3},\infty)$.}
+    \choice{$f'(x)>0$ on $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$  and $f'(x)>0$ on $\left(\frac{\sqrt{3}}{3},\infty\right)$.}
+    \choice{$f'(x)>0$ on $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$ and $f'(x)<0$ on $\left(\frac{\sqrt{3}}{3},\infty\right)$.}
+       \choice[correct]{$f'(x)<0$ on   $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$  and $f'(x)>0$ on $\left(\frac{\sqrt{3}}{3},\infty\right)$.}
+         \choice{$f'(x)<0$ on  $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$  and $f'(x)<0$ on $\left(\frac{\sqrt{3}}{3},\infty\right)$.}
   \end{multipleChoice}
   \end{question}
 Again, the sign of the derivative on an interval determines whether the function is increasing or decreasing on that interval. This will help us determine whether the function has a local extremum at the critical point  where $x=\frac{\sqrt{3}}{3}$. \\
@@ -435,10 +441,10 @@ Again, the sign of the derivative on an interval determines whether the function
 At the critical point where $x=\frac{\sqrt{3}}{3}$, the function $f$ has  \\
  
   \begin{multipleChoice}
-    \choice{no local extremum, because $f$ is increasing on $(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})$ and increasing on $(\frac{\sqrt{3}}{3},\infty)$. }
-       \choice{a local maximum, because $f$ is increasing on $(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})$ and decreasing on $(\frac{\sqrt{3}}{3},\infty)$. }
-      \choice[correct]{a local minimum, because $f$ is decreasing on $(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})$ and increasing on $(\frac{\sqrt{3}}{3},\infty)$. }
-        \choice{no local extremum, because $f$ is decreasing on$(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3})$ and decreasing on $(\frac{\sqrt{3}}{3},\infty)$. }
+    \choice{no local extremum, because $f$ is increasing on $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$ and increasing on $\left(\frac{\sqrt{3}}{3},\infty\right)$. }
+       \choice{a local maximum, because $f$ is increasing on $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$ and decreasing on $\left(\frac{\sqrt{3}}{3},\infty\right)$. }
+      \choice[correct]{a local minimum, because $f$ is decreasing on $\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$ and increasing on $\left(\frac{\sqrt{3}}{3},\infty\right)$. }
+        \choice{no local extremum, because $f$ is decreasing on$\left(-\frac{\sqrt{3}}{3},\frac{\sqrt{3}}{3}\right)$ and decreasing on $\left(\frac{\sqrt{3}}{3},\infty\right)$. }
       \end{multipleChoice}
   \end{question}
  Do your answers agree with the graphs of $f$ and $f'$ given in the picture below?
@@ -493,8 +499,8 @@ So how exactly does the derivative tell us whether there is a maximum,
 minimum, or neither at a point? Use the \textit{first derivative test}.
 
 \begin{theorem}[First Derivative Test]\index{first derivative test}\label{T:fdt}
-Suppose that $f$ is continuous on an interval, and that $f'(a)=0$ for
-some value of $a$ in that interval.
+Suppose that $f$ is continuous on an open interval, and that $f$  has a critical point
+at $x=a$, for some value $a$ in that interval.
 \begin{itemize}
 \item If $f'(x)>0$ to the left of $a$ and $f'(x)<0$ to the right of
   $a$, then $f(a)$ is a local maximum.
@@ -510,7 +516,7 @@ Consider the function
 \[
 f(x) = \frac{x^4}{4}+\frac{x^3}{3}-x^2
 \]
-Find the intervals on which $f$ is increasing and decreasing and
+Find the intervals on which $f$ is increasing, the intervals on which $f$ is decreasing and
 identify the local extrema of $f$.
 
 
@@ -590,7 +596,9 @@ From this we can make a sign table:
 Hence $f$ is increasing on $(-2,0)$ and $(1,\infty)$ and $f$ is
 decreasing on $(-\infty,-2)$ and $(0,1)$. Moreover, from the first
 derivative test, the local maximum is at $x=0$ while the local minimums
-are at $x=-2$ and $x=1$, see the graphs of $f(x) =x^4/4 + x^3/3
+are at $x=-2$ and $x=1$.
+
+This can be confirmed by checking the graphs of $f(x) =x^4/4 + x^3/3
 -x^2$ and $f'(x) = x^3 + x^2 -2x$.
 \begin{image}
 \begin{tikzpicture}
@@ -641,7 +649,7 @@ studying how $f'$ changes. This leads us to our next section.
 
 
 If we are trying to understand the shape of the graph of a function,
-knowing where it is concave up and concave down helps us to get a more
+knowing where it is concave up and concave down helps us  get a more
 accurate picture. It is worth summarizing what we have seen already in
 to a single theorem.
 
@@ -722,8 +730,21 @@ points.
 Even if $f''(a) = 0$, the point determined by $x=a$ might \textbf{not}
 be an inflection point.
 \end{warning}
+\begin{example}
+Describe the concavity of $f(x)=x^4$. 
 
+\begin{explanation}
+To start, compute the first and second derivative of $f(x)$ with
+respect to $x$,
+\[
+f'(x)=\answer[given]{4x^3}\qquad\text{and}\qquad f''(x)=\answer[given]{12x^2}.
+\]
 
+Since $f''(0)=0$, there is potentially an inflection point at
+$x=0$. But, for any  $x\ne 0$, $f''(x)>0$. Hence there is no inflection point at $x=0$. The curve is
+concave up for all $x<0$ and  remains concave up for all $x>0$.
+\end{explanation}
+\end{example}
 \begin{example}
 Describe the concavity of $f(x)=x^3-x$. 
 
@@ -773,19 +794,21 @@ we can then try one of the other tests.
 
 
 Recall the first derivative test:
+
 \begin{itemize}
-\item If $f'(x)>0$ to the left of $a$ and $f'(x)<0$ to the right of
+\item If $f'(x)>0$ for all $x$ that are near and to the left of $a$ and $f'(x)<0$  for all $x$ that are near and to the right of
   $a$, then $f(a)$ is a local maximum.
-\item If $f'(x)<0$ to the left of $a$ and $f'(x)>0$ to the right of
+\item If $f'(x)<0$ for all $x$ that are near and  to the left of $a$ and $f'(x)>0$ for all $x$ that are near and  to the right of
   $a$, then $f(a)$ is a local minimum.
 \end{itemize}
 
-If $f'$ changes from positive to negative it is decreasing. In this
-case, $f''$ might be negative, and if in fact $f''$ is negative
+Let $a$ be a critical point such that $f'(a)=0$.
+If $f'$  happens to be decreasing on some interval containing $a$, then it changes from positive to negative at $a$. 
+Therefore, if $f''$ is negative on some interval that contains $a$,
 then $f'$ is definitely decreasing, so there is a local maximum at
-the point in question. On the other hand, if $f'$ changes from
-negative to positive it is increasing. Again, this means that
-$f''$ might be positive, and if in fact $f''$ is positive then
+the point in question. On the other hand, if $f'$ is increasing, then it changes from
+negative to positive at $a$. Therefore,
+if $f''$ is positive on an interval that contains $a$, then
 $f'$ is definitely increasing, so there is a local minimum at the
 point in question. We summarize this as the \textit{second derivative
   test}.
@@ -812,7 +835,7 @@ Once again, consider the function
 \[
 f(x) = \frac{x^4}{4}+\frac{x^3}{3}-x^2
 \]
-Use the second derivative test, to locate the
+Use the second derivative test to locate the
 local extrema of $f$.
 
 \begin{explanation}

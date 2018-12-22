@@ -1,7 +1,10 @@
 \documentclass{ximera}
 
-\outcome{Find the derivative of a parametric curve.}
-\outcome{Integrate a parametric curve that does not cross itself.}
+\outcome{Find the derivative $\frac{dy}{dx}$ for a curve defined parametrically.}
+\outcome{Find the equation of a tangent line for a curve defined parametrically.}
+\outcome{Find where a parametrically defined curve has vertical and horizontal tangent lines.}
+\outcome{Understand the difference between a curve and the representation of the curve.}
+
 
 \input{../preamble.tex}
 
@@ -9,7 +12,7 @@
 
 \begin{document}
 \begin{abstract}
-  We discuss derivatives and integrals of parametric curves.  
+  We discuss derivatives of parametrically defined curves.  
 \end{abstract}
 \maketitle
 
@@ -20,12 +23,12 @@ Recall from differential calculus that the tangent line provides the best linear
 Suppose we have a curve given parametrically. Remember that for some parametric curves would be difficult or impossible to find Cartesian forms. We would like to be able to find the slope of the tangent line directly from the parametric description without having to convert to a Cartesian form.
 
 
-Suppose we have a curve $C$ that is traced out by the parametric equations 
+Suppose we have a curve $C$ that is traced out by the parametric equations
 
 \[ 
 \begin{cases}
-x&=x(t) \\
-y&=y(t)
+x=x(t) \\
+y=y(t)
 \end{cases}
 \]
 
@@ -39,13 +42,7 @@ We use the chain rule to write
 Recall from the Inverse Function Theorem, we have $\dd[t]{x}=\frac{1}{\dd[x]{t}}$. This means we can rewrite $\dd[y]{x}$ as 
 
 \[
-\frac{\d y}{\d x} = \frac{\dd[y]{t}}{ \dd[x]{t}}
-\]
-
-Here the notation is a little cumbersome so we often write this formula in the following way:
-
-\[
-\frac{\d y}{\d x} = \frac{ y'(t)}{x'(t)}
+\frac{\d y}{\d x} = \frac{\d y / \d t }{\d x/ \d t}
 \]
 
 Notice that this formula allows us to calculate $\dd[y]{x}$ directly from our parametric description of $C$.
